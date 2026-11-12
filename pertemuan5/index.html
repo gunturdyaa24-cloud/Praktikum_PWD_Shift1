@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniStore - Toko Online</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div>
+                <h1>MiniStore</h1>
+                <p>Belanja mudah, cepat, dan praktis.</p>
+            </div>
+
+            <button class="cart-toggle" id="toggleCart">
+                🛒 Keranjang (<span id="headerCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- DAFTAR PRODUK -->
+        <section class="toolbar">
+            <h2>Daftar Produk</h2>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari nama produk..."
+            >
+        </section>
+
+        <section id="productList" class="product-grid"></section>
+
+        <!-- KERANJANG -->
+        <section id="cartPanel">
+
+            <div class="cart-heading">
+                <h2>Keranjang Belanja</h2>
+
+                <button class="secondary-btn" id="closeCart">
+                    Tutup ✕
+                </button>
+            </div>
+
+            <div id="cartItems"></div>
+
+            <p id="emptyMessage">
+                Keranjang masih kosong.
+            </p>
+
+            <div class="cart-summary">
+
+                <div class="summary-line">
+                    <span>Jumlah item:</span>
+                    <strong id="itemCount">0</strong>
+                </div>
+
+                <div class="summary-line total">
+                    <span>Total harga:</span>
+                    <span id="totalPrice">Rp0</span>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="secondary-btn" id="clearCart">
+                        Kosongkan Keranjang
+                    </button>
+
+                    <button class="checkout-btn" id="checkout">
+                        Checkout
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RINGKASAN PESANAN -->
+        <section id="orderSummary">
+
+            <h2>Ringkasan Pesanan</h2>
+
+            <p>
+                <strong>Nama pembeli:</strong>
+                <span id="buyerName"></span>
+            </p>
+
+            <p><strong>Daftar item:</strong></p>
+
+            <ul id="orderList"></ul>
+
+            <p class="total">
+                Total pembayaran:
+                <span id="orderTotal"></span>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        MiniStore - Toko Online Sederhana
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
